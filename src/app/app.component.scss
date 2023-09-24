@@ -39,11 +39,11 @@
             cursor: pointer;
         
             &.github {
-                background-image: url('/assets/github-logo.png');
+                background-image: url('~src/assets/github-logo.png');
             }
         
             &.email {
-                background-image: url('/assets/mail.png');
+                background-image: url('~src/assets/mail.png');
             }
         }
 

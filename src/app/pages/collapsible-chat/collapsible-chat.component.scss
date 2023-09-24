@@ -17,13 +17,13 @@
         filter: invert(100%);
     
         &.bot{
-            background-image: url('/assets/bot.png');
+            background-image: url('~src/assets/bot.png');
             background-size: 35px;
             transform: none;
         }
     
         &.chat {
-            background-image: url('/assets/chat.png');
+            background-image: url('~src/assets/chat.png');
             background-size: 30px;
             transform: rotateZ(-360deg);
         }
