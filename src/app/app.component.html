@@ -1,0 +1,27 @@
+<div class="full width height">
+  <div class="app-header display-flex row center">
+    <span class="header-title display-flex center grow-one">
+      Angular Chatbot Example
+    </span>
+    <div class="header-actions display-flex center grow-ten">
+      <form [formGroup]="form">
+        <mat-button-toggle-group class="chat-buttons" formControlName="display">
+          <mat-button-toggle class="option-button" value="fixed-chat" routerLink="fixed-chat">Fixed</mat-button-toggle>
+          <mat-button-toggle class="option-button" value="collapsible-chat" routerLink="collapsible-chat">Collapsible</mat-button-toggle>
+        </mat-button-toggle-group>
+      </form>
+    </div>
+    <div class="app-socials display-flex center grow-one">
+      <span class="copy-alert" *ngIf="copyEmail">Copied email!</span>
+      <div class="display-flex column full width">
+        <div class="display-flex center">
+          <div mat-card-avatar class="icon github" (click)="onClickRedirectGithub()"></div>
+        </div>
+        <div class="display-flex center">
+          <div mat-card-avatar class="icon email" [cdkCopyToClipboard]="email" (click)="onClickCopyEmail()"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,12 @@
+<button 
+    class="chat-button" 
+    matSuffix 
+    mat-fab
+    (click)="onClickOpenChat()"
+    [disableRipple]="true"
+>
+    <div [ngClass]="isOpen ? 'button-icon chat' : 'button-icon bot'" mat-card-avatar></div>
+</button>
+<div *ngIf="isOpen">
+    <app-chat [display]="'collapsible-chat'"></app-chat>
+</div>

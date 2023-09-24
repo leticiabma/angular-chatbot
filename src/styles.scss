@@ -1,0 +1,115 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$orange: #FF893B;
+$black: #465461;
+$blue: #729CA2;
+$light_blue: #C4DCDF;
+$white: #ECF3F4;
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$angular-chatbot-primary: mat-palette($mat-indigo);
+$angular-chatbot-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$angular-chatbot-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$angular-chatbot-theme: mat-light-theme((
+  color: (
+    primary: $angular-chatbot-primary,
+    accent: $angular-chatbot-accent,
+    warn: $angular-chatbot-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($angular-chatbot-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.display-flex {
+  display: flex;
+
+  &.row {
+    flex-direction: row;
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.grow-one {
+    flex: 1;
+  }
+
+  &.grow-ten {
+    flex: 10;
+  }
+}
+
+.full {
+  &.width {
+    width: 100%;
+  }
+
+  &.height {
+    height: 100%;
+  }
+}
+
+.mat-button-toggle-checked {
+  background-color: $blue !important;
+  color: white !important;
+}
+
+.mat-card-header-text {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.mat-form-field-wrapper {
+  width: 100% !important;
+  padding: 0px !important;
+}
+
+.mat-form-field-flex {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.mat-form-field-infix {
+  padding: 0px !important;
+  border: 0px !important;
+  margin-left: 16px !important;
+}
+
+.mat-card {
+  padding: 0px !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

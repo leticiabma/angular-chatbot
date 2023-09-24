@@ -1,0 +1,75 @@
+@import '/src/colors';
+
+.app-header {
+    height: 15%;
+    background-color: $black;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    .header-title {
+        text-align: center;
+        height: 100%;
+        color: $white;
+        font-size: 20px;
+    }
+
+    .header-actions {
+        .chat-buttons {
+            gap: 40px;
+            height:30%;
+            border-radius: 0px;
+            border: none;
+
+            .option-button {
+                background-color: #ffffff;
+                color: $black;
+                min-width: 120px;
+            }
+        }
+    }
+
+    .app-socials {      
+        .icon {
+            background-size: 25px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+            width: 20%;
+            cursor: pointer;
+        
+            &.github {
+                background-image: url('/assets/github-logo.png');
+            }
+        
+            &.email {
+                background-image: url('/assets/mail.png');
+            }
+        }
+
+        .copy-alert {
+            position: absolute;
+            margin-right: 7%;
+            margin-top: 40px;
+            width: 10%;
+            color: $white;
+            animation:copy-alert 2s 1;
+            -webkit-animation:copy-alert 2s 1;
+            animation-fill-mode: forwards;
+        
+            animation-delay:2s;
+            -webkit-animation-delay:1s; /* Safari and Chrome */
+            -webkit-animation-fill-mode: forwards;
+        }
+        
+        @keyframes copy-alert{
+            from {opacity :1;}
+            to {opacity :0;}
+        }
+        
+        @-webkit-keyframes copy-alert{
+            from {opacity :1;}
+            to {opacity :0;}
+        }
+    }    
+}
