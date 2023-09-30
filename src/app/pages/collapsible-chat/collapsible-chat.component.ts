@@ -31,8 +31,8 @@ import { Component } from '@angular/core';
   ]
 })
 export class CollapsibleChatComponent {
-  private readonly botIconPath = './assets/bot.png';
-  private readonly chatIconPath = './assets/chat.png';
+  private readonly botIconPath = '/assets/bot.png';
+  private readonly chatIconPath = '/assets/chat.png';
 
   public isOpen = false;
   public iconSrc = this.botIconPath;
