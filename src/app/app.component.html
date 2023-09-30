@@ -14,11 +14,11 @@
     <div class="app-socials display-flex -grow-one full-height">
       <div class="socials-icons display-flex -column -center full-height">
         <div class="display-flex -center">
-          <img class="icon" src="assets/github-logo.png" (click)="onClickRedirectGithub()">
+          <img class="icon" src="./assets/github-logo.png" (click)="onClickRedirectGithub()">
         </div>
         <div class="display-flex -center">
           <span class="copy-alert" *ngIf="copyEmail">Copied email!</span>
-          <img class="icon" src="assets/mail.png" [cdkCopyToClipboard]="email" (click)="onClickCopyEmail()">
+          <img class="icon" src="./assets/mail.png" [cdkCopyToClipboard]="email" (click)="onClickCopyEmail()">
         </div>
       </div>
     </div>

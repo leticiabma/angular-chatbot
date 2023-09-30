@@ -31,15 +31,19 @@ import { Component } from '@angular/core';
   ]
 })
 export class CollapsibleChatComponent {
+  private readonly botIconPath = './assets/bot.png';
+  private readonly chatIconPath = './assets/chat.png';
+
   public isOpen = false;
-  public iconSrc = 'assets/bot.png';
+  public iconSrc = this.botIconPath;
   public iconState = 'default';
+
 
   public onChangeChatState(): void {
     this.isOpen = !this.isOpen;
     this.iconState = (this.iconState === 'default' ? 'rotated' : 'default');
 
-    if (this.isOpen) this.iconSrc = 'assets/chat.png';
-    else this.iconSrc = 'assets/bot.png';
+    if (this.isOpen) this.iconSrc = this.chatIconPath;
+    else this.iconSrc = this.botIconPath;
   }
 }
