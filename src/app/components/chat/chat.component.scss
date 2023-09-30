@@ -30,8 +30,6 @@
     padding: 5%;
 
     .chat-icon {
-        background-image: url('~src/assets/bot.png');
-        background-size: cover;
         -webkit-filter: invert(100%);
         filter: invert(100%);
     }
@@ -114,24 +112,25 @@
         overflow: hidden;
         display: inline-block;
         vertical-align: bottom;
-        -webkit-animation: ellipsis steps(4, end) 900ms infinite;
-        animation: ellipsis steps(4, end) 900ms infinite;
+        -webkit-animation: loading-message steps(4, end) 1500ms infinite;
+        animation: loading-message steps(4, end) 1500ms infinite;
         content: "\2026";
         width: 0px;
         font-size: 20px;
+        color: $white;
 
-        @keyframes ellipsis {
+        @keyframes loading-message {
             to {
                 width: 18px;
             }
         }
           
-        @-webkit-keyframes ellipsis {
+        @-webkit-keyframes loading-message {
             to {
                 width: 18px;
             }
         }
-    }  
+    }
 }
 
 .chat-actions {

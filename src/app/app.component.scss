@@ -28,29 +28,21 @@
         }
     }
 
-    .app-socials {      
+    .app-socials {
+        .socials-icons{
+            gap: 20%;
+        }
+
         .icon {
-            background-size: 25px;
-            background-repeat: no-repeat;
-            background-position: center center;
             -webkit-filter: invert(100%);
             filter: invert(100%);
             width: 20%;
             cursor: pointer;
-        
-            &.github {
-                background-image: url('~src/assets/github-logo.png');
-            }
-        
-            &.email {
-                background-image: url('~src/assets/mail.png');
-            }
         }
 
         .copy-alert {
             position: absolute;
-            margin-right: 7%;
-            margin-top: 40px;
+            right: 5%;
             width: 10%;
             color: $white;
             animation:copy-alert 2s 1;

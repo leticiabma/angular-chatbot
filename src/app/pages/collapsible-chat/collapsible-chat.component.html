@@ -2,11 +2,8 @@
     class="chat-button" 
     matSuffix 
     mat-fab
-    (click)="onClickOpenChat()"
-    [disableRipple]="true"
->
-    <div [ngClass]="isOpen ? 'button-icon chat' : 'button-icon bot'" mat-card-avatar></div>
+    (click)="onChangeChatState()"
+    [disableRipple]="true">
+    <img [src]="iconSrc" [@rotateAnimation]="iconState" [ngClass]="isOpen ? 'button-icon chat' : 'button-icon bot'"> 
 </button>
-<div *ngIf="isOpen">
-    <app-chat [display]="'collapsible-chat'"></app-chat>
-</div>
+<app-chat *ngIf="isOpen" [display]="'collapsible-chat'" [@fadeAnimation]></app-chat>

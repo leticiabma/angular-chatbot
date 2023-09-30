@@ -10,22 +10,15 @@
     background-color: $black;
 
     .button-icon {
-        background-repeat: no-repeat;
-        background-position: center center;
-        transition: transform 0.5s, background-image 0.5s;
         -webkit-filter: invert(100%);
         filter: invert(100%);
-    
-        &.bot{
-            background-image: url('~src/assets/bot.png');
-            background-size: 35px;
-            transform: none;
-        }
-    
+
         &.chat {
-            background-image: url('~src/assets/chat.png');
-            background-size: 30px;
-            transform: rotateZ(-360deg);
+            width: 70%;
+        }
+
+        &.bot {
+            width: 75%;
         }
     }
 }

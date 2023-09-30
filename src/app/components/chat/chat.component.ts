@@ -2,7 +2,7 @@ import { AfterViewChecked, Component, ElementRef, Input, OnInit, ViewChild } fro
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 class Message {
-  text: string;
+  text?: string;
   type: MessageType;
 }
 
@@ -53,7 +53,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
 
   private getBotMessage(): void {
     this.canSendMessage = false;
-    const waitMessage: Message = {text: '', type: MessageType.Loading};
+    const waitMessage: Message = {type: MessageType.Loading};
     this.messages.push(waitMessage);
 
     setTimeout(() => {
