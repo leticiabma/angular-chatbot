@@ -1,14 +1,19 @@
 @import '/src/colors';
 
+.chat-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .fixed-chat {
     display: flex;
     flex-direction: column;
     width: 25%;
     height: 70%;
     position: fixed;
-    top: 22.5%;
-    left: 37.5%;
     border-radius: 8px;
+    margin-top: 7vh;
 }
 
 .collapsible-chat {
@@ -35,6 +40,7 @@
     }
 
     .chat-title {
+        font-size: 1rem;
         font-weight: 500;
         margin-bottom: 0px !important;
     }
@@ -162,4 +168,14 @@
             font-size: 20px;
         }
     }
+}
+
+@media only screen and (max-width: 700px) {
+    [class*="fixed-chat"] {
+      width: 80%;
+    }
+
+    [class*="collapsible-chat"] {
+        width: 80%;
+      }
 }
