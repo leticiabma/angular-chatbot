@@ -1,6 +1,5 @@
 import { Location } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -11,13 +10,10 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   public email = environment.email;
   public copyEmail = false;
-  public form: FormGroup;
+  public display = 'fixed-chat';
 
-  constructor(private formBuilder: FormBuilder, private location: Location) {
-    const display = this.location.path().split('/')[1];
-    this.form = this.formBuilder.group({
-      display: [display ?? 'fixed-chat']
-    });
+  constructor(private location: Location) {
+    this.display = this.location.path().split('/')[1];
   }
 
   public onClickCopyEmail(): void {
