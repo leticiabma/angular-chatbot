@@ -1,24 +1,28 @@
 <div class="full-width full-height">
   <div class="app-header display-flex -row -center">
-    <span class="header-title display-flex -center -grow-one">
+    <span class="header-title display-flex -center">
       Angular Chatbot Example
     </span>
-    <div class="header-actions display-flex -center -grow-ten">
-      <form [formGroup]="form">
-        <mat-button-toggle-group class="chat-buttons" formControlName="display">
-          <mat-button-toggle class="option-button" value="fixed-chat" routerLink="fixed-chat">Fixed</mat-button-toggle>
-          <mat-button-toggle class="option-button" value="collapsible-chat" routerLink="collapsible-chat">Collapsible</mat-button-toggle>
-        </mat-button-toggle-group>
-      </form>
+    <div class="header-actions display-flex -center">
+        <div class="chat-buttons">
+          <div class="button-container">
+            <input id="fixed-chat" type="radio" name="display-button" value="fixed-chat" routerLink="fixed-chat" [checked]="display === 'fixed-chat'"/>
+            <label for="fixed-chat">Fixed</label>
+          </div>
+          <div class="button-container">
+            <input id="collapsible-chat" type="radio" name="display-button" value="collapsible-chat" routerLink="collapsible-chat" [checked]="display === 'collapsible-chat'"/>
+            <label for="collapsible-chat">Collapsible</label>
+          </div>
+        </div>
     </div>
-    <div class="app-socials display-flex -grow-one full-height">
+    <div class="app-socials display-flex full-height">
       <div class="socials-icons display-flex -column -center full-height">
         <div class="display-flex -center">
           <img class="icon" src="./assets/github-logo.png" (click)="onClickRedirectGithub()">
         </div>
         <div class="display-flex -center">
-          <span class="copy-alert" *ngIf="copyEmail">Copied email!</span>
           <img class="icon" src="./assets/mail.png" [cdkCopyToClipboard]="email" (click)="onClickCopyEmail()">
+          <span class="copy-alert" *ngIf="copyEmail">Copied email!</span>
         </div>
       </div>
     </div>
