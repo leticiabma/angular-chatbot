@@ -1,6 +1,7 @@
 import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { DisplayType } from './shared/enums/display-type.enum';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,12 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   public email = environment.email;
   public copyEmail = false;
-  public display = 'fixed-chat';
+  public displayType = DisplayType;
+  public display = DisplayType.Fixed;
 
   constructor(private location: Location) {
-    this.display = this.location.path().split('/')[1];
+    const path = this.location.path().split('/')[1];
+    this.display =  path ? path as DisplayType : this.display;
   }
 
   public onClickCopyEmail(): void {

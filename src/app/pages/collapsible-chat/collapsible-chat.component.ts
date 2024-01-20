@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
+import { DisplayType } from 'src/app/shared/enums/display-type.enum';
 
 @Component({
   selector: 'app-collapsible-chat',
@@ -38,7 +39,8 @@ export class CollapsibleChatComponent {
   public iconSrc = this.botIconPath;
   public iconState = 'default';
 
-
+  public displayType = DisplayType;
+  
   public onChangeChatState(): void {
     this.isOpen = !this.isOpen;
     this.iconState = (this.iconState === 'default' ? 'rotated' : 'default');
