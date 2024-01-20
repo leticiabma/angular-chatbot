@@ -6,11 +6,11 @@
     <div class="header-actions display-flex -center">
         <div class="chat-buttons">
           <div class="button-container">
-            <input id="fixed-chat" type="radio" name="display-button" value="fixed-chat" routerLink="fixed-chat" [checked]="display === 'fixed-chat'"/>
+            <input id="fixed-chat" type="radio" name="display-button" value="{{displayType.Fixed}}" routerLink="{{displayType.Fixed}}" [checked]="display === displayType.Fixed"/>
             <label for="fixed-chat">Fixed</label>
           </div>
           <div class="button-container">
-            <input id="collapsible-chat" type="radio" name="display-button" value="collapsible-chat" routerLink="collapsible-chat" [checked]="display === 'collapsible-chat'"/>
+            <input id="collapsible-chat" type="radio" name="display-button" value="{{displayType.Collapsible}}" routerLink="{{displayType.Collapsible}}" [checked]="display === displayType.Collapsible"/>
             <label for="collapsible-chat">Collapsible</label>
           </div>
         </div>

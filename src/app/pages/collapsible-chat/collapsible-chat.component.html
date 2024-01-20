@@ -6,4 +6,4 @@
     [disableRipple]="true">
     <img [src]="iconSrc" [@rotateAnimation]="iconState" [ngClass]="isOpen ? 'button-icon chat' : 'button-icon bot'"> 
 </button>
-<app-chat *ngIf="isOpen" [display]="'collapsible-chat'" [@fadeAnimation]></app-chat>
+<app-chat *ngIf="isOpen" [display]="displayType.Collapsible" [@fadeAnimation]></app-chat>
