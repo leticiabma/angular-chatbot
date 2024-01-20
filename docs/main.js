@@ -297,18 +297,23 @@ const environment = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FixedChatComponent", function() { return FixedChatComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _components_chat_chat_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/chat/chat.component */ "3tD2");
+/* harmony import */ var src_app_shared_enums_display_type_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/shared/enums/display-type.enum */ "Sy+D");
+/* harmony import */ var _components_chat_chat_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/chat/chat.component */ "3tD2");
+
 
 
 
 class FixedChatComponent {
+    constructor() {
+        this.displayType = src_app_shared_enums_display_type_enum__WEBPACK_IMPORTED_MODULE_1__["DisplayType"];
+    }
 }
 FixedChatComponent.ɵfac = function FixedChatComponent_Factory(t) { return new (t || FixedChatComponent)(); };
 FixedChatComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FixedChatComponent, selectors: [["app-fixed-chat"]], decls: 1, vars: 1, consts: [[3, "display"]], template: function FixedChatComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-chat", 0);
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("display", "fixed-chat");
-    } }, directives: [_components_chat_chat_component__WEBPACK_IMPORTED_MODULE_1__["ChatComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJmaXhlZC1jaGF0LmNvbXBvbmVudC5zY3NzIn0= */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("display", ctx.displayType.Fixed);
+    } }, directives: [_components_chat_chat_component__WEBPACK_IMPORTED_MODULE_2__["ChatComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJmaXhlZC1jaGF0LmNvbXBvbmVudC5zY3NzIn0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FixedChatComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -333,10 +338,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CollapsibleChatComponent", function() { return CollapsibleChatComponent; });
 /* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/animations */ "R0Ic");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
-/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/form-field */ "kmnG");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _components_chat_chat_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/chat/chat.component */ "3tD2");
+/* harmony import */ var src_app_shared_enums_display_type_enum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/enums/display-type.enum */ "Sy+D");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/form-field */ "kmnG");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _components_chat_chat_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/chat/chat.component */ "3tD2");
+
 
 
 
@@ -347,7 +354,8 @@ __webpack_require__.r(__webpack_exports__);
 function CollapsibleChatComponent_app_chat_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-chat", 3);
 } if (rf & 2) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("display", "collapsible-chat")("@fadeAnimation", undefined);
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("display", ctx_r0.displayType.Collapsible)("@fadeAnimation", undefined);
 } }
 class CollapsibleChatComponent {
     constructor() {
@@ -356,6 +364,7 @@ class CollapsibleChatComponent {
         this.isOpen = false;
         this.iconSrc = this.botIconPath;
         this.iconState = 'default';
+        this.displayType = src_app_shared_enums_display_type_enum__WEBPACK_IMPORTED_MODULE_2__["DisplayType"];
     }
     onChangeChatState() {
         this.isOpen = !this.isOpen;
@@ -379,7 +388,7 @@ CollapsibleChatComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("src", ctx.iconSrc, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"])("@rotateAnimation", ctx.iconState)("ngClass", ctx.isOpen ? "button-icon chat" : "button-icon bot");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.isOpen);
-    } }, directives: [_angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatButton"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_3__["MatSuffix"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _components_chat_chat_component__WEBPACK_IMPORTED_MODULE_5__["ChatComponent"]], styles: [".chat-button[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: fixed;\n  bottom: 5%;\n  right: 3%;\n  background-color: #465461;\n}\n.chat-button[_ngcontent-%COMP%]   .button-icon[_ngcontent-%COMP%] {\n  filter: invert(100%);\n}\n.chat-button[_ngcontent-%COMP%]   .button-icon.chat[_ngcontent-%COMP%] {\n  width: 70%;\n}\n.chat-button[_ngcontent-%COMP%]   .button-icon.bot[_ngcontent-%COMP%] {\n  width: 75%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFxjb2xsYXBzaWJsZS1jaGF0LmNvbXBvbmVudC5zY3NzIiwiLi5cXC4uXFwuLlxcLi5cXC4uXFwuLlxcLi5cXGNvbG9ycy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxlQUFBO0VBQ0EsVUFBQTtFQUNBLFNBQUE7RUFDQSx5QkNSSTtBRE9SO0FBR0k7RUFFSSxvQkFBQTtBQURSO0FBR1E7RUFDSSxVQUFBO0FBRFo7QUFJUTtFQUNJLFVBQUE7QUFGWiIsImZpbGUiOiJjb2xsYXBzaWJsZS1jaGF0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnL3NyYy9jb2xvcnMnO1xyXG5cclxuLmNoYXQtYnV0dG9uIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICBib3R0b206IDUlO1xyXG4gICAgcmlnaHQ6IDMlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGJsYWNrO1xyXG5cclxuICAgIC5idXR0b24taWNvbiB7XHJcbiAgICAgICAgLXdlYmtpdC1maWx0ZXI6IGludmVydCgxMDAlKTtcclxuICAgICAgICBmaWx0ZXI6IGludmVydCgxMDAlKTtcclxuXHJcbiAgICAgICAgJi5jaGF0IHtcclxuICAgICAgICAgICAgd2lkdGg6IDcwJTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgICYuYm90IHtcclxuICAgICAgICAgICAgd2lkdGg6IDc1JTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbn0iLCIkb3JhbmdlOiAjRkY4OTNCO1xyXG4kYmxhY2s6ICM0NjU0NjE7XHJcbiRibHVlOiAjNzI5Q0EyO1xyXG4kbGlnaHRfYmx1ZTogI0M0RENERjtcclxuJHdoaXRlOiAjRUNGM0Y0OyJdfQ== */"], data: { animation: [
+    } }, directives: [_angular_material_button__WEBPACK_IMPORTED_MODULE_3__["MatButton"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatSuffix"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _components_chat_chat_component__WEBPACK_IMPORTED_MODULE_6__["ChatComponent"]], styles: [".chat-button[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: fixed;\n  bottom: 5%;\n  right: 3%;\n  background-color: #465461;\n}\n.chat-button[_ngcontent-%COMP%]   .button-icon[_ngcontent-%COMP%] {\n  filter: invert(100%);\n}\n.chat-button[_ngcontent-%COMP%]   .button-icon.chat[_ngcontent-%COMP%] {\n  width: 70%;\n}\n.chat-button[_ngcontent-%COMP%]   .button-icon.bot[_ngcontent-%COMP%] {\n  width: 75%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFxjb2xsYXBzaWJsZS1jaGF0LmNvbXBvbmVudC5zY3NzIiwiLi5cXC4uXFwuLlxcLi5cXC4uXFwuLlxcLi5cXGNvbG9ycy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxlQUFBO0VBQ0EsVUFBQTtFQUNBLFNBQUE7RUFDQSx5QkNSSTtBRE9SO0FBR0k7RUFFSSxvQkFBQTtBQURSO0FBR1E7RUFDSSxVQUFBO0FBRFo7QUFJUTtFQUNJLFVBQUE7QUFGWiIsImZpbGUiOiJjb2xsYXBzaWJsZS1jaGF0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnL3NyYy9jb2xvcnMnO1xyXG5cclxuLmNoYXQtYnV0dG9uIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICBib3R0b206IDUlO1xyXG4gICAgcmlnaHQ6IDMlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGJsYWNrO1xyXG5cclxuICAgIC5idXR0b24taWNvbiB7XHJcbiAgICAgICAgLXdlYmtpdC1maWx0ZXI6IGludmVydCgxMDAlKTtcclxuICAgICAgICBmaWx0ZXI6IGludmVydCgxMDAlKTtcclxuXHJcbiAgICAgICAgJi5jaGF0IHtcclxuICAgICAgICAgICAgd2lkdGg6IDcwJTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgICYuYm90IHtcclxuICAgICAgICAgICAgd2lkdGg6IDc1JTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbn0iLCIkb3JhbmdlOiAjRkY4OTNCO1xyXG4kYmxhY2s6ICM0NjU0NjE7XHJcbiRibHVlOiAjNzI5Q0EyO1xyXG4kbGlnaHRfYmx1ZTogI0M0RENERjtcclxuJHdoaXRlOiAjRUNGM0Y0OyJdfQ== */"], data: { animation: [
             Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["trigger"])('rotateAnimation', [
                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["state"])('rotated', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'rotate(0deg)' })),
                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["state"])('default', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'rotate(-360deg)' })),
@@ -427,6 +436,25 @@ CollapsibleChatComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵ�
 
 /***/ }),
 
+/***/ "Sy+D":
+/*!***************************************************!*\
+  !*** ./src/app/shared/enums/display-type.enum.ts ***!
+  \***************************************************/
+/*! exports provided: DisplayType */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DisplayType", function() { return DisplayType; });
+var DisplayType;
+(function (DisplayType) {
+    DisplayType["Fixed"] = "fixed-chat";
+    DisplayType["Collapsible"] = "collapsible-chat";
+})(DisplayType || (DisplayType = {}));
+
+
+/***/ }),
+
 /***/ "Sy1n":
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
@@ -439,9 +467,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/environments/environment */ "AytR");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var _angular_cdk_clipboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/cdk/clipboard */ "UXJo");
+/* harmony import */ var _shared_enums_display_type_enum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared/enums/display-type.enum */ "Sy+D");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _angular_cdk_clipboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/cdk/clipboard */ "UXJo");
+
 
 
 
@@ -458,8 +488,10 @@ class AppComponent {
         this.location = location;
         this.email = src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].email;
         this.copyEmail = false;
-        this.display = 'fixed-chat';
-        this.display = this.location.path().split('/')[1];
+        this.displayType = _shared_enums_display_type_enum__WEBPACK_IMPORTED_MODULE_2__["DisplayType"];
+        this.display = _shared_enums_display_type_enum__WEBPACK_IMPORTED_MODULE_2__["DisplayType"].Fixed;
+        const path = this.location.path().split('/')[1];
+        this.display = path ? path : this.display;
     }
     onClickCopyEmail() {
         this.copyEmail = true;
@@ -471,8 +503,8 @@ class AppComponent {
         window.open(src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].githubUrl, '_blank');
     }
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 22, vars: 4, consts: [[1, "full-width", "full-height"], [1, "app-header", "display-flex", "-row", "-center"], [1, "header-title", "display-flex", "-center"], [1, "header-actions", "display-flex", "-center"], [1, "chat-buttons"], [1, "button-container"], ["id", "fixed-chat", "type", "radio", "name", "display-button", "value", "fixed-chat", "routerLink", "fixed-chat", 3, "checked"], ["for", "fixed-chat"], ["id", "collapsible-chat", "type", "radio", "name", "display-button", "value", "collapsible-chat", "routerLink", "collapsible-chat", 3, "checked"], ["for", "collapsible-chat"], [1, "app-socials", "display-flex", "full-height"], [1, "socials-icons", "display-flex", "-column", "-center", "full-height"], [1, "display-flex", "-center"], ["src", "./assets/github-logo.png", 1, "icon", 3, "click"], ["src", "./assets/mail.png", 1, "icon", 3, "cdkCopyToClipboard", "click"], ["class", "copy-alert", 4, "ngIf"], [1, "copy-alert"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"])); };
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 22, vars: 8, consts: [[1, "full-width", "full-height"], [1, "app-header", "display-flex", "-row", "-center"], [1, "header-title", "display-flex", "-center"], [1, "header-actions", "display-flex", "-center"], [1, "chat-buttons"], [1, "button-container"], ["id", "fixed-chat", "type", "radio", "name", "display-button", 3, "value", "routerLink", "checked"], ["for", "fixed-chat"], ["id", "collapsible-chat", "type", "radio", "name", "display-button", 3, "value", "routerLink", "checked"], ["for", "collapsible-chat"], [1, "app-socials", "display-flex", "full-height"], [1, "socials-icons", "display-flex", "-column", "-center", "full-height"], [1, "display-flex", "-center"], ["src", "./assets/github-logo.png", 1, "icon", 3, "click"], ["src", "./assets/mail.png", 1, "icon", 3, "cdkCopyToClipboard", "click"], ["class", "copy-alert", 4, "ngIf"], [1, "copy-alert"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "span", 2);
@@ -514,14 +546,18 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("checked", ctx.display === "fixed-chat");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("value", ctx.displayType.Fixed);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("routerLink", ctx.displayType.Fixed);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("checked", ctx.display === ctx.displayType.Fixed);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("checked", ctx.display === "collapsible-chat");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("value", ctx.displayType.Collapsible);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("routerLink", ctx.displayType.Collapsible);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("checked", ctx.display === ctx.displayType.Collapsible);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("cdkCopyToClipboard", ctx.email);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.copyEmail);
-    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLink"], _angular_cdk_clipboard__WEBPACK_IMPORTED_MODULE_4__["CdkCopyToClipboard"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterOutlet"]], styles: [".app-header[_ngcontent-%COMP%] {\n  height: 15%;\n  background-color: #465461;\n  justify-content: space-between;\n  padding: 0 16px;\n}\n.app-header[_ngcontent-%COMP%]   .header-title[_ngcontent-%COMP%] {\n  width: 10%;\n  height: 100%;\n  text-align: center;\n  color: #ECF3F4;\n  font-size: 2vh;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%] {\n  width: 80%;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%] {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  gap: 3%;\n  height: 30%;\n  border-radius: 0;\n  border: none;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%]   .button-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  min-width: 15%;\n  text-align: center;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%]   .button-container[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  display: none;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%]   .button-container[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  font-size: 1.8vh;\n  padding: 0.5em 0.5em;\n  cursor: pointer;\n  transition: all 0.3s;\n  background: #ECF3F4;\n  border-radius: 2px;\n  color: #465461;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%]   .button-container[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]:hover {\n  opacity: 0.8;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%]   .button-container[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:checked    + label[_ngcontent-%COMP%] {\n  background: #729CA2;\n}\n.app-header[_ngcontent-%COMP%]   .app-socials[_ngcontent-%COMP%] {\n  width: 10%;\n  justify-content: center;\n}\n.app-header[_ngcontent-%COMP%]   .app-socials[_ngcontent-%COMP%]   .socials-icons[_ngcontent-%COMP%] {\n  gap: 20%;\n}\n.app-header[_ngcontent-%COMP%]   .app-socials[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  filter: invert(100%);\n  width: 2.5vh;\n  cursor: pointer;\n}\n.app-header[_ngcontent-%COMP%]   .app-socials[_ngcontent-%COMP%]   .copy-alert[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 16%;\n  width: 10%;\n  color: #729CA2;\n  font-size: 2vh;\n  font-weight: 500;\n  animation: copy-alert 2s 1;\n  -webkit-animation: copy-alert 2s 1;\n  animation-fill-mode: forwards;\n  animation-delay: 2s;\n  -webkit-animation-delay: 1s;\n  \n  -webkit-animation-fill-mode: forwards;\n}\n@keyframes copy-alert {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcYXBwLmNvbXBvbmVudC5zY3NzIiwiLi5cXC4uXFwuLlxcY29sb3JzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSxXQUFBO0VBQ0EseUJDSEk7RURJSiw4QkFBQTtFQUNBLGVBQUE7QUFESjtBQUdJO0VBQ0ksVUFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtFQUNBLGNDUkE7RURTQSxjQUFBO0FBRFI7QUFJSTtFQUNJLFVBQUE7QUFGUjtBQUlRO0VBQ0ksV0FBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0EsT0FBQTtFQUNBLFdBQUE7RUFDQSxnQkFBQTtFQUNBLFlBQUE7QUFGWjtBQUlZO0VBQ0ksYUFBQTtFQUNBLHNCQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0FBRmhCO0FBSWdCO0VBQ0ksYUFBQTtBQUZwQjtBQUtnQjtFQUNJLGdCQUFBO0VBQ0Esb0JBQUE7RUFDQSxlQUFBO0VBQ0Esb0JBQUE7RUFDQSxtQkN4Q1o7RUR5Q1ksa0JBQUE7RUFDQSxjQzdDWjtBRDBDUjtBQU1nQjtFQUNJLFlBQUE7QUFKcEI7QUFPZ0I7RUFDSSxtQkNwRGI7QUQrQ1A7QUFXSTtFQUNJLFVBQUE7RUFDQSx1QkFBQTtBQVRSO0FBV1E7RUFDSSxRQUFBO0FBVFo7QUFZUTtFQUVJLG9CQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7QUFWWjtBQWFRO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsVUFBQTtFQUNBLGNDN0VMO0VEOEVLLGNBQUE7RUFDQSxnQkFBQTtFQUNBLDBCQUFBO0VBQ0Esa0NBQUE7RUFDQSw2QkFBQTtFQUVBLG1CQUFBO0VBQ0EsMkJBQUE7RUFBNEIsc0JBQUE7RUFDNUIscUNBQUE7QUFYWjtBQWNRO0VBQ0k7SUFBTSxVQUFBO0VBWGhCO0VBWVU7SUFBSSxVQUFBO0VBVGQ7QUFDRiIsImZpbGUiOiJhcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0ICcvc3JjL2NvbG9ycyc7XHJcblxyXG4uYXBwLWhlYWRlciB7XHJcbiAgICBoZWlnaHQ6IDE1JTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICRibGFjaztcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIHBhZGRpbmc6IDAgMTZweDtcclxuXHJcbiAgICAuaGVhZGVyLXRpdGxlIHtcclxuICAgICAgICB3aWR0aDogMTAlO1xyXG4gICAgICAgIGhlaWdodDogMTAwJTtcclxuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICAgICAgY29sb3I6ICR3aGl0ZTtcclxuICAgICAgICBmb250LXNpemU6IDJ2aDtcclxuICAgIH1cclxuXHJcbiAgICAuaGVhZGVyLWFjdGlvbnMge1xyXG4gICAgICAgIHdpZHRoOiA4MCU7XHJcblxyXG4gICAgICAgIC5jaGF0LWJ1dHRvbnMge1xyXG4gICAgICAgICAgICB3aWR0aDogMTAwJTtcclxuICAgICAgICAgICAgZGlzcGxheTogZmxleDtcclxuICAgICAgICAgICAgZmxleC1kaXJlY3Rpb246IHJvdztcclxuICAgICAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICAgICAgICAgIGdhcDogMyU7XHJcbiAgICAgICAgICAgIGhlaWdodDozMCU7XHJcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDA7XHJcbiAgICAgICAgICAgIGJvcmRlcjogbm9uZTtcclxuXHJcbiAgICAgICAgICAgIC5idXR0b24tY29udGFpbmVyIHtcclxuICAgICAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgICAgICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgICAgICAgICAgICAgbWluLXdpZHRoOiAxNSU7XHJcbiAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcblxyXG4gICAgICAgICAgICAgICAgaW5wdXQgeyBcclxuICAgICAgICAgICAgICAgICAgICBkaXNwbGF5OiBub25lO1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICBsYWJlbCB7XHJcbiAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxLjh2aDtcclxuICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOiAwLjVlbSAwLjVlbTtcclxuICAgICAgICAgICAgICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICAgICAgICAgICAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuM3M7XHJcbiAgICAgICAgICAgICAgICAgICAgYmFja2dyb3VuZDogJHdoaXRlO1xyXG4gICAgICAgICAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDJweDtcclxuICAgICAgICAgICAgICAgICAgICBjb2xvcjogJGJsYWNrO1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICBsYWJlbDpob3ZlciB7XHJcbiAgICAgICAgICAgICAgICAgICAgb3BhY2l0eTogMC44O1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICBpbnB1dDpjaGVja2VkICsgbGFiZWx7XHJcbiAgICAgICAgICAgICAgICAgICAgYmFja2dyb3VuZDogJGJsdWU7XHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgLmFwcC1zb2NpYWxzIHtcclxuICAgICAgICB3aWR0aDogMTAlO1xyXG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG5cclxuICAgICAgICAuc29jaWFscy1pY29uc3tcclxuICAgICAgICAgICAgZ2FwOiAyMCU7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICAuaWNvbiB7XHJcbiAgICAgICAgICAgIC13ZWJraXQtZmlsdGVyOiBpbnZlcnQoMTAwJSk7XHJcbiAgICAgICAgICAgIGZpbHRlcjogaW52ZXJ0KDEwMCUpO1xyXG4gICAgICAgICAgICB3aWR0aDogMi41dmg7XHJcbiAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIC5jb3B5LWFsZXJ0IHtcclxuICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAgICAgICB0b3A6IDE2JTtcclxuICAgICAgICAgICAgd2lkdGg6IDEwJTtcclxuICAgICAgICAgICAgY29sb3I6ICRibHVlO1xyXG4gICAgICAgICAgICBmb250LXNpemU6IDJ2aDtcclxuICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICAgICAgICAgICAgYW5pbWF0aW9uOmNvcHktYWxlcnQgMnMgMTtcclxuICAgICAgICAgICAgLXdlYmtpdC1hbmltYXRpb246Y29weS1hbGVydCAycyAxO1xyXG4gICAgICAgICAgICBhbmltYXRpb24tZmlsbC1tb2RlOiBmb3J3YXJkcztcclxuICAgICAgICBcclxuICAgICAgICAgICAgYW5pbWF0aW9uLWRlbGF5OjJzO1xyXG4gICAgICAgICAgICAtd2Via2l0LWFuaW1hdGlvbi1kZWxheToxczsgLyogU2FmYXJpIGFuZCBDaHJvbWUgKi9cclxuICAgICAgICAgICAgLXdlYmtpdC1hbmltYXRpb24tZmlsbC1tb2RlOiBmb3J3YXJkcztcclxuICAgICAgICB9XHJcbiAgICAgICAgXHJcbiAgICAgICAgQGtleWZyYW1lcyBjb3B5LWFsZXJ0e1xyXG4gICAgICAgICAgICBmcm9tIHtvcGFjaXR5IDoxO31cclxuICAgICAgICAgICAgdG8ge29wYWNpdHkgOjA7fVxyXG4gICAgICAgIH1cclxuICAgICAgICBcclxuICAgICAgICBALXdlYmtpdC1rZXlmcmFtZXMgY29weS1hbGVydHtcclxuICAgICAgICAgICAgZnJvbSB7b3BhY2l0eSA6MTt9XHJcbiAgICAgICAgICAgIHRvIHtvcGFjaXR5IDowO31cclxuICAgICAgICB9XHJcbiAgICB9ICAgIFxyXG59IiwiJG9yYW5nZTogI0ZGODkzQjtcclxuJGJsYWNrOiAjNDY1NDYxO1xyXG4kYmx1ZTogIzcyOUNBMjtcclxuJGxpZ2h0X2JsdWU6ICNDNERDREY7XHJcbiR3aGl0ZTogI0VDRjNGNDsiXX0= */"] });
+    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterLink"], _angular_cdk_clipboard__WEBPACK_IMPORTED_MODULE_5__["CdkCopyToClipboard"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterOutlet"]], styles: [".app-header[_ngcontent-%COMP%] {\n  height: 15%;\n  background-color: #465461;\n  justify-content: space-between;\n  padding: 0 16px;\n}\n.app-header[_ngcontent-%COMP%]   .header-title[_ngcontent-%COMP%] {\n  width: 10%;\n  height: 100%;\n  text-align: center;\n  color: #ECF3F4;\n  font-size: 2vh;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%] {\n  width: 80%;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%] {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  gap: 3%;\n  height: 30%;\n  border-radius: 0;\n  border: none;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%]   .button-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  min-width: 15%;\n  text-align: center;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%]   .button-container[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  display: none;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%]   .button-container[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  font-size: 1.8vh;\n  padding: 0.5em 0.5em;\n  cursor: pointer;\n  transition: all 0.3s;\n  background: #ECF3F4;\n  border-radius: 2px;\n  color: #465461;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%]   .button-container[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]:hover {\n  opacity: 0.8;\n}\n.app-header[_ngcontent-%COMP%]   .header-actions[_ngcontent-%COMP%]   .chat-buttons[_ngcontent-%COMP%]   .button-container[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:checked    + label[_ngcontent-%COMP%] {\n  background: #729CA2;\n}\n.app-header[_ngcontent-%COMP%]   .app-socials[_ngcontent-%COMP%] {\n  width: 10%;\n  justify-content: center;\n}\n.app-header[_ngcontent-%COMP%]   .app-socials[_ngcontent-%COMP%]   .socials-icons[_ngcontent-%COMP%] {\n  gap: 20%;\n}\n.app-header[_ngcontent-%COMP%]   .app-socials[_ngcontent-%COMP%]   .icon[_ngcontent-%COMP%] {\n  filter: invert(100%);\n  width: 2.5vh;\n  cursor: pointer;\n}\n.app-header[_ngcontent-%COMP%]   .app-socials[_ngcontent-%COMP%]   .copy-alert[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 16%;\n  width: 10%;\n  color: #729CA2;\n  font-size: 2vh;\n  font-weight: 500;\n  animation: copy-alert 2s 1;\n  -webkit-animation: copy-alert 2s 1;\n  animation-fill-mode: forwards;\n  animation-delay: 2s;\n  -webkit-animation-delay: 1s;\n  \n  -webkit-animation-fill-mode: forwards;\n}\n@keyframes copy-alert {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcYXBwLmNvbXBvbmVudC5zY3NzIiwiLi5cXC4uXFwuLlxcY29sb3JzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSxXQUFBO0VBQ0EseUJDSEk7RURJSiw4QkFBQTtFQUNBLGVBQUE7QUFESjtBQUdJO0VBQ0ksVUFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtFQUNBLGNDUkE7RURTQSxjQUFBO0FBRFI7QUFJSTtFQUNJLFVBQUE7QUFGUjtBQUlRO0VBQ0ksV0FBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0EsT0FBQTtFQUNBLFdBQUE7RUFDQSxnQkFBQTtFQUNBLFlBQUE7QUFGWjtBQUlZO0VBQ0ksYUFBQTtFQUNBLHNCQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0FBRmhCO0FBSWdCO0VBQ0ksYUFBQTtBQUZwQjtBQUtnQjtFQUNJLGdCQUFBO0VBQ0Esb0JBQUE7RUFDQSxlQUFBO0VBQ0Esb0JBQUE7RUFDQSxtQkN4Q1o7RUR5Q1ksa0JBQUE7RUFDQSxjQzdDWjtBRDBDUjtBQU1nQjtFQUNJLFlBQUE7QUFKcEI7QUFPZ0I7RUFDSSxtQkNwRGI7QUQrQ1A7QUFXSTtFQUNJLFVBQUE7RUFDQSx1QkFBQTtBQVRSO0FBV1E7RUFDSSxRQUFBO0FBVFo7QUFZUTtFQUVJLG9CQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7QUFWWjtBQWFRO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsVUFBQTtFQUNBLGNDN0VMO0VEOEVLLGNBQUE7RUFDQSxnQkFBQTtFQUNBLDBCQUFBO0VBQ0Esa0NBQUE7RUFDQSw2QkFBQTtFQUVBLG1CQUFBO0VBQ0EsMkJBQUE7RUFBNEIsc0JBQUE7RUFDNUIscUNBQUE7QUFYWjtBQWNRO0VBQ0k7SUFBTSxVQUFBO0VBWGhCO0VBWVU7SUFBSSxVQUFBO0VBVGQ7QUFDRiIsImZpbGUiOiJhcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0ICcvc3JjL2NvbG9ycyc7XHJcblxyXG4uYXBwLWhlYWRlciB7XHJcbiAgICBoZWlnaHQ6IDE1JTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICRibGFjaztcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIHBhZGRpbmc6IDAgMTZweDtcclxuXHJcbiAgICAuaGVhZGVyLXRpdGxlIHtcclxuICAgICAgICB3aWR0aDogMTAlO1xyXG4gICAgICAgIGhlaWdodDogMTAwJTtcclxuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICAgICAgY29sb3I6ICR3aGl0ZTtcclxuICAgICAgICBmb250LXNpemU6IDJ2aDtcclxuICAgIH1cclxuXHJcbiAgICAuaGVhZGVyLWFjdGlvbnMge1xyXG4gICAgICAgIHdpZHRoOiA4MCU7XHJcblxyXG4gICAgICAgIC5jaGF0LWJ1dHRvbnMge1xyXG4gICAgICAgICAgICB3aWR0aDogMTAwJTtcclxuICAgICAgICAgICAgZGlzcGxheTogZmxleDtcclxuICAgICAgICAgICAgZmxleC1kaXJlY3Rpb246IHJvdztcclxuICAgICAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICAgICAgICAgIGdhcDogMyU7XHJcbiAgICAgICAgICAgIGhlaWdodDozMCU7XHJcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDA7XHJcbiAgICAgICAgICAgIGJvcmRlcjogbm9uZTtcclxuXHJcbiAgICAgICAgICAgIC5idXR0b24tY29udGFpbmVyIHtcclxuICAgICAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgICAgICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgICAgICAgICAgICAgbWluLXdpZHRoOiAxNSU7XHJcbiAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcblxyXG4gICAgICAgICAgICAgICAgaW5wdXQgeyBcclxuICAgICAgICAgICAgICAgICAgICBkaXNwbGF5OiBub25lO1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICBsYWJlbCB7XHJcbiAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxLjh2aDtcclxuICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOiAwLjVlbSAwLjVlbTtcclxuICAgICAgICAgICAgICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICAgICAgICAgICAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuM3M7XHJcbiAgICAgICAgICAgICAgICAgICAgYmFja2dyb3VuZDogJHdoaXRlO1xyXG4gICAgICAgICAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDJweDtcclxuICAgICAgICAgICAgICAgICAgICBjb2xvcjogJGJsYWNrO1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICBsYWJlbDpob3ZlciB7XHJcbiAgICAgICAgICAgICAgICAgICAgb3BhY2l0eTogMC44O1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICBpbnB1dDpjaGVja2VkICsgbGFiZWx7XHJcbiAgICAgICAgICAgICAgICAgICAgYmFja2dyb3VuZDogJGJsdWU7XHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgLmFwcC1zb2NpYWxzIHtcclxuICAgICAgICB3aWR0aDogMTAlO1xyXG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG5cclxuICAgICAgICAuc29jaWFscy1pY29uc3tcclxuICAgICAgICAgICAgZ2FwOiAyMCU7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICAuaWNvbiB7XHJcbiAgICAgICAgICAgIC13ZWJraXQtZmlsdGVyOiBpbnZlcnQoMTAwJSk7XHJcbiAgICAgICAgICAgIGZpbHRlcjogaW52ZXJ0KDEwMCUpO1xyXG4gICAgICAgICAgICB3aWR0aDogMi41dmg7XHJcbiAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIC5jb3B5LWFsZXJ0IHtcclxuICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAgICAgICB0b3A6IDE2JTtcclxuICAgICAgICAgICAgd2lkdGg6IDEwJTtcclxuICAgICAgICAgICAgY29sb3I6ICRibHVlO1xyXG4gICAgICAgICAgICBmb250LXNpemU6IDJ2aDtcclxuICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICAgICAgICAgICAgYW5pbWF0aW9uOmNvcHktYWxlcnQgMnMgMTtcclxuICAgICAgICAgICAgLXdlYmtpdC1hbmltYXRpb246Y29weS1hbGVydCAycyAxO1xyXG4gICAgICAgICAgICBhbmltYXRpb24tZmlsbC1tb2RlOiBmb3J3YXJkcztcclxuICAgICAgICBcclxuICAgICAgICAgICAgYW5pbWF0aW9uLWRlbGF5OjJzO1xyXG4gICAgICAgICAgICAtd2Via2l0LWFuaW1hdGlvbi1kZWxheToxczsgLyogU2FmYXJpIGFuZCBDaHJvbWUgKi9cclxuICAgICAgICAgICAgLXdlYmtpdC1hbmltYXRpb24tZmlsbC1tb2RlOiBmb3J3YXJkcztcclxuICAgICAgICB9XHJcbiAgICAgICAgXHJcbiAgICAgICAgQGtleWZyYW1lcyBjb3B5LWFsZXJ0e1xyXG4gICAgICAgICAgICBmcm9tIHtvcGFjaXR5IDoxO31cclxuICAgICAgICAgICAgdG8ge29wYWNpdHkgOjA7fVxyXG4gICAgICAgIH1cclxuICAgICAgICBcclxuICAgICAgICBALXdlYmtpdC1rZXlmcmFtZXMgY29weS1hbGVydHtcclxuICAgICAgICAgICAgZnJvbSB7b3BhY2l0eSA6MTt9XHJcbiAgICAgICAgICAgIHRvIHtvcGFjaXR5IDowO31cclxuICAgICAgICB9XHJcbiAgICB9ICAgIFxyXG59IiwiJG9yYW5nZTogI0ZGODkzQjtcclxuJGJsYWNrOiAjNDY1NDYxO1xyXG4kYmx1ZTogIzcyOUNBMjtcclxuJGxpZ2h0X2JsdWU6ICNDNERDREY7XHJcbiR3aGl0ZTogI0VDRjNGNDsiXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -529,7 +565,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
                 templateUrl: './app.component.html',
                 styleUrls: ['./app.component.scss']
             }]
-    }], function () { return [{ type: _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"] }]; }, null); })();
 
 
 /***/ }),
@@ -621,6 +657,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _pages_fixed_chat_fixed_chat_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/fixed-chat/fixed-chat.component */ "OD22");
 /* harmony import */ var _pages_collapsible_chat_collapsible_chat_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/collapsible-chat/collapsible-chat.component */ "P0tK");
+/* harmony import */ var _shared_enums_display_type_enum__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shared/enums/display-type.enum */ "Sy+D");
+
 
 
 
@@ -630,15 +668,15 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: '',
-        redirectTo: 'fixed-chat',
+        redirectTo: _shared_enums_display_type_enum__WEBPACK_IMPORTED_MODULE_4__["DisplayType"].Fixed,
         pathMatch: 'full',
     },
     {
-        path: 'fixed-chat',
+        path: _shared_enums_display_type_enum__WEBPACK_IMPORTED_MODULE_4__["DisplayType"].Fixed,
         component: _pages_fixed_chat_fixed_chat_component__WEBPACK_IMPORTED_MODULE_2__["FixedChatComponent"]
     },
     {
-        path: 'collapsible-chat',
+        path: _shared_enums_display_type_enum__WEBPACK_IMPORTED_MODULE_4__["DisplayType"].Collapsible,
         component: _pages_collapsible_chat_collapsible_chat_component__WEBPACK_IMPORTED_MODULE_3__["CollapsibleChatComponent"]
     }
 ];
