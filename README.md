@@ -1,6 +1,6 @@
 # AngularChatbot
 
-An Angular Project for a Chatbot UI with integration with Googles's Dialogflow.
+An Angular Project for a Chatbot UI.
 
 See demo: https://leticiabma.github.io/angular-chatbot
 
